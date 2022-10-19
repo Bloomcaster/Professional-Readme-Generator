@@ -87,23 +87,87 @@ const questions = [
 
 //CONTRIBUTORS to the code
 {
-    
+   type: 'input',
+   name: 'contribution',
+   message: 'How may users contribute to this project?',
+   validate: your_contribution => {
+    if (your_contribution) {
+        return true;
+    } else {
+        console.log('How would you like others to add code and how to do so');
+        return false;
+    }
 }
+},
 
+// Test Information
+{
+    type: 'input',
+    name: 'test',
+    message: 'How does the user test the application/project?',
+    validate: your_test => {
+        if (your_test) {
+            return true;
+        } else {
+            console.log('Describe how to test this project.');
+            return false;
+        }
+    }
+},
 
-        
-    
-    
+//Github information
+{
+    type: 'input',
+    name: 'github',
+    message: 'Required, enter Github Username',
+    vaildate: github_input => {
+        if (github_input) {
+            return true;
 
+        }else {
+            console.log('You must enter your Github Username!!');
+            return false;
+        }
+    }
 
+},
 
+// Email Information
+{
+    type: 'input',
+    name: 'email',
+    message: 'Enter your email so that anyone that has questions about your generator may contact you',
+    validate: email_input => {
+        if (email_input) {
+            return true;
+        } else {
+            console.log('Please enter your email');
+            return false;
+        }
+    }
+},
 ];
-
+    
+    
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(filename, data, (err) => {
+        if (err) {
+            return console.log(err);
+        }
+
+        console.log("Congratulations!! You can preview your README file");
+    });
+};
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+    .then(function(userInput) {
+        console.log(userInput)
+        writeToFile("README.md", generateMarkdown(userInput));
+    });
+};
 
 // Function call to initialize app
 init();

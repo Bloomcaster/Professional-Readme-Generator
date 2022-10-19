@@ -1,3 +1,31 @@
+
+function generateMarkdown(data) {
+  return `# ${data.title}
+  ## License:
+  //[!license]https://img.shields.io/badge/license-${data.license}-blue.svg)](hwere to get this info from???)
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Testing](#testing)
+- [Additional Information](#addtional-information)
+
+## Description:
+${data.description}
+## Installation:
+${data.installation}
+## Usage:
+${data.usage}
+## License:
+${data.license}
+## Testing:
+${data.testing}
+## Contact Information:
+- Github: [${data.github}](https://github.com/${data.github}
+- Email: [${data.email}](mailto:user@example.com) `;
+
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
@@ -14,7 +42,7 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
 
-`;
-}
+
+
 
 module.exports = generateMarkdown;
