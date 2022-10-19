@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const generateMarkdown = require('generateMarkdown.js');
+const generateMarkdown = require('./generateMarkdown');
 const fs = require('fs');
 console.log("A professional README generator")
 console.log("Answer the folowing questions to quickly generate a README for your project")
@@ -74,7 +74,7 @@ const questions = [
     type: 'checkbox',
     name: 'license',
     message: 'Which license would you like for this project?',
-    choices: ['MLP 2.0', 'GNU', 'Apache', 'MIT', 'None of the above'],
+    choices: ['MLP 2.0', 'GNU', 'Apache', 'MIT', 'none of the above'],
     validate: your_license => {
         if (your_license) {
             return true;
