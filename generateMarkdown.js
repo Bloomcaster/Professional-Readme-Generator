@@ -22,7 +22,7 @@ function renderLicenseLink(license) {
   return`
   \n*[license](#license)\n
   
-  `
+  `;
 }
 return ""
 }
@@ -60,7 +60,7 @@ function generateMarkdown(data) {
  ## License:
  ${renderLicenseSection(data.license)}
  ## Testing:
- ${data.testing}
+ ${data.test}
  ## Contact Information:
  - Github: [${data.github}](https://github.com/${data.github}
  - Email: [${data.email}](mailto:user@example.com) `;

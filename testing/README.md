@@ -13,11 +13,11 @@
  - [Additional Information](#addtional-information)
  
  ## Description:
- THis is a project that helps the user generate a README file
+ Providing a streamlined professional README for Github projects
  ## Installation:
- node index.js
+ for this project using node index.js to start the generator
  ## Usage:
- when you start a project
+ This is used to help cut down on time to get a new application/project started in Github
  
   
 *[license](#license)
@@ -30,7 +30,7 @@
  The project is licensed under: license
  
  ## Testing:
- undefined
+ node index.js
  ## Contact Information:
  - Github: [Bloomcaster](https://github.com/Bloomcaster
  - Email: [tbolden13@gmail.com](mailto:user@example.com) 
